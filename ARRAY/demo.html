@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <p>Enter a Vietnamese word in the below</p>
+    <input type="text" value="" id="txtVnWord"></td>
+    <button onclick="translate1()"> Translate</button>
+    
+    <!-- <input type="button" onclick="translate()" value="Translate" > -->
+    <p id="txtEngWord"></p>
+    
+    
+</body>
+</html>
+<script>
+    var engWord = ["a", "b"];
+    var vnWord = ["c", "d"];
+    var vnValue = document.getElementById('txtVnWord').value;
+    
+    function translate1() {
+        console.log('a')
+        for (i=0; i<vnWord.length; i++) {
+            if (vnValue == vnWord[i] ) {
+                for (j=0; j<engValue.length; j++) {
+                    if (j==i){
+                        document.getElementById('txtEngWord').innerText = engWord[j]
+                    }
+                }
+                
+            }
+        }
+        console.log(engWord[i])
+        
+    }
+</script>

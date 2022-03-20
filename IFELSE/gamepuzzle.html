@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src=".//images/1-1.jpg" onclick="changeImage(1)" id="idImg1" >
+    <img src=".//images/1-2.jpg" onclick="changeImage(2)" id="idImg2" >
+</body>
+<script>
+    function changeImage(stt){
+        if(stt==1){
+            var _elementImg = document.getElementById("idImg1");
+            _elementImg.src = ".//images/1-3.jpg";
+            check();
+        }else{
+            var _elementImg = document.getElementById("idImg2");
+            _elementImg.src = ".//images/1-3.jpg";
+            check();
+        }
+
+    }
+    function check(){
+        var src1 = document.getElementById("idImg1").src;
+        var src2 = document.getElementById("idImg2").src;
+        if(src1==src2){
+            console.log("WINNN------");
+        }
+    }
+</script>
+</html>

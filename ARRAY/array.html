@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    var name1 = "Dai";
+    var name2 = "Tien";
+    var name3 = "Phon";
+    var name4 = "Phuc";
+    var name5 = "Phu";
+    var name6 = "Tai";
+    var name7 = "Vinh";
+    var name8 = "Huy Le";
+    var name9 = "Huy Do";
+    var _class1 = ["Phuoc", "Q Anh"];
+    var _class2 = [name1, name2, name3, name4, name5, name6, name7, name8, name9];
+
+    // Lay do dai cua mang _class1
+    var _lenght = _class2.length;
+    //console.log(_lenght);
+
+    // Duyet qua tat ca cac phan tu cua mang _class2
+    // Them truoc cac ten nay chu: Hoc sinh lop C2022K1
+    //console.log(name1.length);
+
+    /* for(var i=0; i<_class2.length;i++){
+        console.log(`${_class2[i]} la hoc sinh lop C0222K1`);
+        // "Huy Do"
+        if(_class2[i].search("Huy")!=-1){
+            console.log(i);
+        }
+        // search: tim thay thi tra ve vi tri: 0, 1 2 34
+        // search tim khong khong thay thi tra -1
+    } */
+
+    //BT2 Dem xem co bao nhieu nguoi ten huy trong lop
+    
+    /* var n = 0;
+    for(var i=0; i<_class2.length;i++){
+        console.log(`${_class2[i]} la hoc sinh lop C0222K1`);
+        if (_class2[i].search ("Huy")!=-1) {
+            n=n+1;
+            //console.log("So hoc vien ten Huy la " +n);
+        } else {
+            console.log("Khong co hoc vien ten Huy");
+        }
+    }
+    console.log(`Tong so hoc sinh ten Huy ${n}`); */
+
+    // Tinh tong cac so trong mang ma >=5 va <=10
+    
+    /* var sum = 0;
+
+    for(var i=0;i< _number.length; i++){
+        if(_number[i]>5 && _number[i]<10){
+            console.log(_number[i]);
+            sum += _number[i];
+        }
+    }
+    console.log(sum); */
+
+    // Tim gia tri lon nhat cua mang
+    // a1, a2, a3 
+    /* var _number = [-1,8,-5,21, 5, 7, 9, 12, 17, 21, 8];
+    var max = _number[0];
+    for(i=0;i<_number.length;i++){
+        if(_number[i]>max){
+            max = _number[i];
+        }
+    }
+    console.log(max); */
+    // Tim gia tri nho nhat trong mang
+
+    /* var _number = [-1,8,-5,21, 5, 7, 9, 12, 17, 21, 8];
+    var min = _number[0];
+    for(i=0;i<_number.length;i++){
+        if(_number[i]<min){
+            min = _number[i];
+        }
+    }
+    console.log(min); */
+
+    // Tim xem so 12 vi tri thu may trong mang
+    /* var _number = [-1,8,-5,21, 5, 7, 9, 12, 17, 21, 8];
+    var _vitri = 12; */
+
+
+    // Dao nguoc cac phan tu trong mang
+    /* for(var i = 0;i<_number.length/2;i++){
+        var _temp = _number[i];
+        _number[i] = _number[_number.length-1-i];
+        _number[_number.length-1-i] = _temp;
+    }
+    console.log(_number);  */
+
+    // Cac ham
+    /* var _number = [-1,8,5];
+    _number.push(6);
+    var _number1 = [2,3];
+    var _ketqua = _number.concat([4,5]);
+
+    console.log(_ketqua); */
+
+    // Vao w3shool tu xem cac ham co ban concat, indexOF, join, slice, shift, unshift, push, pop
+
+    var myColor = ["Red", "Green", "White", "Black"];
+
+    ///"Red,Green,White,Black" 
+    // Goi y su dung ham join 
+    //myColor.join(',');
+   
+    // Nhap vao day so 0257894
+    var _str = "0257894";
+    
+    var _array = _str.split("");
+    // _array ['0', '2', '5', '7', '8', '9', '4'];
+
+    let num = window.prompt();
+    const str = num.toString();
+    const result = [str[0]];
+    
+    for(let x=1; x<str.length; x++)
+    {
+        if((str[x-1]%2 === 0)&&(str[x]%2 === 0))
+        {
+        result.push('-', str[x]);
+        }
+        else
+        {
+        result.push(str[x]);
+        }
+    }
+    console.log(result.join(''));
+
+
+
+
+    /* var bikes = ["B1", "B2", "B3"];
+    bikes.push("B7");
+    console.log(bikes[1]);
+
+
+    bikes.push("B4");
+    bikes[bikes.length] = "B5";
+    console.log(bikes);
+    
+    var _str = "B6";
+    var bikes1 = pushFunction(bikes, _str);
+    console.log(bikes1);
+
+    function pushFunction(bikes, str){
+        bikes[bikes.length] = "B6";
+        return bikes;
+    } */
+
+
+    /* var cars =  new Array("A1", "A2", "A3");
+    console.log(cars);
+    var bikes = ["B1", "B2", "B3"];
+    bikes.push("B4");
+    bikes[bikes.length] = "B5"; */
+    // Phan tu, chi so, so luong phan tu, truy xuat
+    // thuoc tinh: lenght
+    // phương thức: .push()
+    // Duyet mang
+    /* for(i=0;i<bikes.length;i++){
+        console.log(bikes[i]);
+    }
+    bikes.forEach(function(item)
+        {
+            console.log(item);
+        }
+    );
+    bikes.shift();
+    bikes.unshift("B0");
+    bikes.sort();
+    bikes.reverse(); */
+
+    // Dao nguoc mang
+    // Viet ham dao nguoc mang
+    /* let x = [-3, 5, 1, 3, 2, 10];
+    let first = 0;
+    let last = x.length - 1;
+    while (first < last) {
+    let b = x[first];
+    x[first] = x[last];
+    x[last] = b;
+    first++;
+    last--; */
+
+    // Tim gia tri trong mang
+    // Update dictionary
+    /* let numbers = [-3, 5, 1, 3, 2, 10];
+    let value = 1;
+    for (let i = 0; i < numbers.length; i++) {
+    if (value == numbers[i]) {
+        alert("Value " + numbers[i] + "found at " + i);
+        }
+    } */
+
+    // Tim gia tri lon nhat trong mang, tim gia tri nho nhat
+    // Dem so le trong mang
+    // Cong cac so chia het cho 2
+    // In ra 3 so chia het cho 2 dau tien
+
+    /* let numbers = [-3, 5, 1, 3, 2, 10];
+    let max = numbers[0];
+    let index = 0;
+    for (let i = 1; i < numbers.length; i++) {
+            if (numbers[i] > max) {
+                max = numbers[i];
+                index = i;
+            }
+        }
+
+    // Noi mang concat
+    var _array = [
+        {
+            id: 2,
+            name: 'Dai'
+        },
+        {
+            id: 3,
+            name: 'Thien'
+        }
+    ];
+
+    }
+    */
+    // Ham map trong array
+    /* const animals = [
+        {
+            "id": 1,
+            "name": "cat",
+        },
+        {
+            "id": 2,
+            "name": "dog"
+        }
+    ]; 
+    console.log(animals); */
+    /* var newAnimals = animals.map(function(animal)
+        {
+            if(animal.id==1){
+                animal.name = "Quang";
+            }
+            return animal;
+        }
+    );
+    console.log(newAnimals); */
+    /* var newAnimals = animals.map(function(animal, index, animals)
+        {
+            //console.log(animal);
+            if(animals[index].id==1){
+                animals[index].name = "Quang";
+            }
+            return animals[index];
+        }
+    );
+    console.log(newAnimals); */
+
+
+</script>
+</html>

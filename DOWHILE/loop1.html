@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // for basic
+    for(var i = 1, j=10; i<=10;i++,j--){
+        console.log("i: "+ i + " j: " + j);
+    }
+    // for of
+    var webpage = "codegym.com";
+    for(var w of webpage){
+        console.log(w);
+    }
+    // for in 
+    var person = {
+        firstname: "Le",
+        lastname: "Quang",
+        address: "Hue"
+    }
+    console.log("First name: ", person.firstname);
+    for(var p in person){
+        console.log(person[p]);
+    }
+    // foreach
+    var animals = [
+        {
+            id: 1,
+            name: 'cat',
+            size: 'small'
+        },
+        {
+            id: 2,
+            name: 'dog',
+            size: 'big'
+        }
+    ];
+    animals.forEach(function(_a){
+        console.log(_a);
+
+    }
+    );
+
+    // do while
+    var index = 1;
+    do{
+        console.log(index);
+        index++;
+    }while(index<=10)
+    //for tinh tong
+
+    //for long nhau
+    let sout;
+    sout = "<table border='1' width='300' cellspacing='0' cellpadding='3'>"
+    for (i = 1; i <= 10; i++) {
+        sout = sout + "<tr>";
+        for (j = 1; j <= 10; j++) {
+            sout = sout + "<td>" + i * j + "</td>";
+        }
+        sout = sout + "</tr>";
+    }
+    sout = sout + "</table>";
+    document.write(sout);
+    
+</script>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+
+        <title>Document</title>
+        <style>
+        form span label {
+            display: block;
+            margin-top: 20px;
+        }
+        button {
+            display: block;
+            margin-top: 20px;
+            width: 175px;
+        }
+        select {
+            width: 175px;
+            text-align: center;
+        }
+    </style>
+    </head>
+    <body>
+        <form>
+            <span><label for="">Amount</label><input type="text" id="idAmount"></span>
+            <span>
+                <label for="">From Currency</label>
+                <select name="" id="FromCurrency">
+                    <option value="VietNam">Việt Nam</option>
+                    <option value="My">Mỹ</option>
+                    <option value="Uc">Úc</option>
+                </select>
+            </span>
+            <span>
+                <label for="">To Currency</label>
+                <select name="" id="ToCurrency">
+                    <option value="VND">VND</option>
+                    <option value="USD">USD</option>
+                    <option value="AUD">AUD</option>
+                </select>
+            </span>
+            <span>
+                
+            </span>
+            <p id="demo">hello</p>
+        </form>
+        <button id="btn" onclick="Show()">Convert</button>
+        <script src="./Demo.js"></script>
+        <script>
+        function Show(){
+    var Amo_id = parseFloat(document.getElementById("idAmount").value);
+    var PA = parseInt(Amo_id);
+    var From = document.getElementById("FromCurrency").value;
+    var ToCu = document.getElementById("ToCurrency").value;
+    var KQ;
+    if(From == "VietNam"){
+        if(ToCu == "VND"){
+            document.getElementById("demo").innerHTML = "dvdvd";
+            //alert(Amo_id);
+        }else if(ToCu == "USD"){
+            KQ = Amo_id / 23000;
+            alert(KQ);
+        }else {
+            KQ = Amo_id / 16645.02
+            alert(KQ);
+        }
+    }else if(From == "My"){
+        if(ToCu == "USD"){
+            alert(Amo_id);
+        }else if(ToCu == "VND"){
+            KQ = Amo_id * 23000;
+            alert(KQ);
+        }else {
+            KQ = Amo_id / 16645.02
+            alert(KQ);
+        }
+    }else {
+        alert("Hello Uc");
+    }
+}
+
+    </script>
+    </body>
+
+</html>

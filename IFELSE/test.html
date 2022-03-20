@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <label>Amount</label><br>
+        <input type="text" id = "idAmout" value="0">
+        <label>From</label>
+        <select name = "From" id="idFrom">
+            <option value="usd">USD</option>
+            <option value="vnd">VND</option>
+        </select>
+        <label>To</label>
+        <select id="idTo">
+            <option value="vnd">VND</option>
+            <option value="usd">USD</option>
+        </select>
+        <button type="button"  id="btn">Convert</button>
+    </form>
+</body>
+<script>
+    var x =1;
+    var y= 5;
+    var z = hamCong(x, y);
+    var _truhaiso = hamTruHaiSo(x,y)
+    console.log(_truhaiso);
+    // onmouseover ="thongbao()"
+
+    //thongbao(_truhaiso);
+    var btn = document.getElementById('btn').addEventListener("mouseover", thongbao);
+    function hamCong(a, b){
+        var tong =  a+b;
+        tong = tong*2;
+        return tong;
+    }
+    function hamTruHaiSo(a, b){
+        console.log("Dang thuc hien ham tru");
+        var tru = a-b;
+        return tru;
+    }
+    function thongbao(){
+        alert("goi ham");
+    }
+
+</script>
+</html>

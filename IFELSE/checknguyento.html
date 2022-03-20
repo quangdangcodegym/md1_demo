@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    function checkPrimeInArray(arr) {
+    let check = arr.some(function (prime) {
+        let flag = true;
+        for (let i = 2; i < prime; i++) {
+            if (prime % i == 0) {
+                flag = false;
+                break;
+            }
+        }
+        return flag;
+    })
+    if (check == true) {
+        console.log(`Mảng có chứa số nguyên tố`);
+    } else {
+        console.log(`Mảng không chứa số nguyên tố`);
+    }
+}
+let num = [12];
+checkPrimeInArray(num);
+</script>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="button" id="btnCheck" value="Check Whether If It's A Number.">
+    <p id="demo"></p>
+</body>
+<script>
+    //Viết hàm kiểm tra xem ký tự nhập vào có phải là ký tự số không.
+    //Nếu là ký tự số hàm trả về true, ngược lại trả về false.
+    var num = Number(prompt('Input something: '));
+    document.getElementById('btnCheck').addEventListener('click', checkNumber);
+    function checkNumber(num) {
+        console.log(num);
+        console.log(typeof(num));
+        console.log(Number.toString())
+        if (typeof(num) == Number) {
+            document.getElementById('demo').innerHTML = 'true'
+        } else {
+            document.getElementById('demo').innerHTML = 'false'
+        }
+    }
+</script>
+</html>

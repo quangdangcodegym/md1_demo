@@ -1,0 +1,32 @@
+body{
+    margin: 0;
+}
+#header{
+    background: blanchedalmond;
+    height: 100px;
+    width: 100%;
+}
+#main
+{
+    background: bisque;
+    height: 300px;
+    width: 70%;
+    float: left;
+}
+#sidebar{
+    background: aqua;
+    height: 300px;
+    width: 30%;
+    float: right;
+}
+#footer{
+    background: pink;
+    height: 100px;
+    width: 100%;
+    clear: both;
+}
+.divide{
+    background: yellow;
+    height: 5px;
+    clear: both;
+}
