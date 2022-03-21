@@ -10,10 +10,18 @@
     
 </body>
 <script>
-    /* // Nhiệm vụ của hàm/ tên hàm/ đầu vào của hàm/ đầu ra của hàm
+    /*
+     // Nhiệm vụ của hàm/ tên hàm/ đầu vào của hàm/ đầu ra của hàm
     function sum(a, b){
+        c = 10;
+        let d = 10;
         return a+b;
     }
+
+
+    
+    console.log(c);
+    console.log(d);
     // su dung ham
     //var _value = sum(12, 14);
     // hàm co sẵn: alert(), promt() => các tham số có sẵn của hàm này ntn
@@ -52,14 +60,21 @@
     var arr3 = [];
     var arr4 = [0, 0, 0, 0, 0, 0];
 
+    var arr1 = [3, 5, 1, 8, -3, 7, 8];
+    var arr2 = arr1;
+    arr2[1] = 0;
+
+    console.log(arr1);
+    console.log(arr2);
     function minArray(arr) {
-    let min = arr[0];
-    for(var i = 1; i < arr.length; i++){
-        if(arr[i] < min){
-            min = arr[i];
+        let min = arr[0];
+        for(var i = 1; i < arr.length; i++){
+            if(arr[i] < min){
+                min = arr[i];
+            }
         }
+        return min;
     }
-    return min;
 
     // Kiem tra so nguyen to 
     // 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97...
@@ -106,13 +121,27 @@
     console.log(b);
     console.log(a);
 
-    */
+
     var a = 1;
     var b = a;
 
     b = 2;
     console.log(b);
     console.log(a);
+
+    // Scoped: global, block, function
+
+   let a = 0;
+    for(i=0;i<10;i++){
+        console.log(i);
+    }
+
+    let a = 'dc';
+    console.log(a); 
+    
+    
+    */
+
 
 </script>
 </html>
