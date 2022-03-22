@@ -31,7 +31,7 @@
 
 
  
-    */
+    
     // Tao mang theo kieu linh dong hon theo nRow nCol
     let nRow = 5;
     let nCol = 5;
@@ -52,7 +52,7 @@
 
 
     // Lay phan tu tai dong 1 cot 2
-    console.log(_matrix[1][2]);
+    //console.log(_matrix[1][2]);
 
     // Lay phan tu dong thu 0 va cot cuoi cung
     console.log(_matrix[0][_matrix[0].length-1]);
@@ -64,9 +64,32 @@
     // Lay xem bao nhieu phan tu cua mang o dong thu 4
     console.log(_matrix[4].length);
 
+    */
+
 
     
+    let nRow = 5;
+    let nCol = 5;
+    let min = 2;
+    let max = 10;
+    let _matrix = [];
+    for(let i=0;i<nCol;i++){
+        let _maxtrixRow = [];
+        //let _maxtrixRow = new Array();
+        for(let j=0; j<nRow;j++){
+            //_maxtrixRow[j] = 5;
+            // Tao random so
+            _maxtrixRow[j] = Math.floor(Math.random()*(max - min +1 ) + min);
+        }
+        _matrix[i] = _maxtrixRow;
+    }
+    console.log(_matrix);
 
+    for(let i=0;i<_matrix.length;i++){
+        for(let j=0;j<_matrix[i].length;j++){
+            console.log(_matrix[i][j]);
+        }
+    }
 
 
 
