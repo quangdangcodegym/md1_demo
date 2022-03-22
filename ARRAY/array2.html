@@ -7,7 +7,9 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <div id = "idMatrix">
+        
+    </div>
 </body>
 <script>
     /* 
@@ -68,10 +70,10 @@
 
 
     
-    let nRow = 5;
+    /* let nRow = 5;
     let nCol = 5;
     let min = 2;
-    let max = 10;
+    let max = 9;
     let _matrix = [];
     for(let i=0;i<nCol;i++){
         let _maxtrixRow = [];
@@ -85,14 +87,134 @@
     }
     console.log(_matrix);
 
+    let total = 0;
+    let _str = ""
+    for(let i=0;i<_matrix.length;i++){
+       
+        for(let j=0;j<_matrix[i].length;j++){
+            //console.log(_matrix[i][j]);
+            // _matrix[i][j] chan le?
+            _str += _matrix[i][j] + " ";
+            if(_matrix[i][j]%2==0){
+                total += _matrix[i][j];
+            }
+        }
+        _str += "\n";
+    } */
+    //document.getElementById("idMatrix").innerText = _str;
+
+
+    /// Thao tac voi mang 2 chieu
+    // Duong cheo chinh
+    /* let _str1 = "";
     for(let i=0;i<_matrix.length;i++){
         for(let j=0;j<_matrix[i].length;j++){
-            console.log(_matrix[i][j]);
+            if(i==j){
+                _str1+= _matrix[i][j] + "*";
+            }else{
+                _str1+= "*" + "*";
+            }
         }
+        _str1 += "\n";
     }
+    document.getElementById("idMatrix").innerText = _str1; */
+
+    /* let nRow = 5;
+    let nCol = 5;
+    let min = 2;
+    let max = 9;
+    let _matrix = [];
+    for(let i=0;i<nCol;i++){
+        let _maxtrixRow = [];
+        //let _maxtrixRow = new Array();
+        for(let j=0; j<nRow;j++){
+            //_maxtrixRow[j] = 5;
+            // Tao random so
+            _maxtrixRow[j] = Math.floor(Math.random()*(max - min +1 ) + min);
+        }
+        _matrix[i] = _maxtrixRow;
+    }
+    console.log(_matrix);
 
 
+    let _str1 = "<table border='1'>";
+    for(let i=0;i<_matrix.length;i++){
+        _str1 += "<tr>"
+        for(let j=0;j<_matrix[i].length;j++){
+            if(i==_matrix[i].length-1-j){
+                _str1 += "<td>";
+                _str1 += _matrix[i][j];
+                _str1 += "</td>";
+            }else{
+                _str1 += "<td>";
+                _str1 += "*";
+                _str1 += "</td>";
+            }
+        }
+        _str1 += "</tr>";
+    }
+    _str1 += "</table>";
+    document.getElementById("idMatrix").innerHTML = _str1; */
 
+
+    // Ve tam giac
+    let nRow = 5;
+    let nCol = 5;
+    let min = 2;
+    let max = 9;
+    let _matrix = [];
+    for(let i=0;i<nCol;i++){
+        let _maxtrixRow = [];
+        //let _maxtrixRow = new Array();
+        for(let j=0; j<nRow;j++){
+            //_maxtrixRow[j] = 5;
+            // Tao random so
+            _maxtrixRow[j] = Math.floor(Math.random()*(max - min +1 ) + min);
+        }
+        _matrix[i] = _maxtrixRow;
+    }
+    console.log(_matrix);
+
+
+    /* let _str1 = "<table border='1'>";
+    for(let i=0;i<_matrix.length;i++){
+        _str1 += "<tr>"
+        for(let j=0;j<=i;j++){
+            _str1 += "<td>";
+            _str1 += _matrix[i][j];
+            _str1 += "</td>";
+    }
+        _str1 += "</tr>";
+    }
+    _str1 += "</table>"; */
+    //document.getElementById("idMatrix").innerHTML = _str1;
+
+    // Ve bang button
+    let _str =""
+    for(let i=0;i<_matrix.length;i++){
+        _str += "<div>";
+        for(let j=0;j<_matrix.length;j++){
+            _str += `<input min='${i}' max = '${j}' onclick='btnClick(this)' type='button' value= '`;
+            _str += '0';
+            _str += "''>";
+        }
+        _str += "</div>";
+    }
+    document.getElementById("idMatrix").innerHTML = _str;
+
+    function btnClick(elementInput){
+        let i = elementInput.min;
+        let j = elementInput.max;
+
+        //alert(iValue + "-- "+ jValue);
+
+        if(_matrix[i][j]=='0'){
+            _matrix[i][j]=='x'
+        }else{
+            _matrix[i][j]=='0'
+        }
+
+    }
 
 </script>
 </html>
