@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    /* 
+    // Tao mang 2 chieu bang cach thu cong
+    let _arr0 = [5,5,5,5,5];
+    let _arr1 = [5,5,5,5,5];
+    let _arr2 = [5,5,5,5,5];
+    let _arr3 = [5,5,5,5,5];
+    let _arr4 = [5,5,5,5,5];
+
+    let _matrix = [_arr0, _arr1, _arr2, _arr3, _arr4];
+
+    let _matrix1 = [ [5,5,5,5,5], [5,5,5,5,5], [5,5,5,5,5], [5,5,5,5,5], [5,5,5,5,5]  ];
+
+    console.log(_matrix);
+    console.log(_matrix1);
+
+
+    let _array = new Array(); 
+    let _array1 = [];
+
+
+ 
+    */
+    // Tao mang theo kieu linh dong hon theo nRow nCol
+    let nRow = 5;
+    let nCol = 5;
+    let min = 2;
+    let max = 10;
+    let _matrix = [];
+    for(let i=0;i<nCol;i++){
+        let _maxtrixRow = [];
+        //let _maxtrixRow = new Array();
+        for(let j=0; j<nRow;j++){
+            //_maxtrixRow[j] = 5;
+            // Tao random so
+            _maxtrixRow[j] = Math.floor(Math.random()*(max - min +1 ) + min);
+        }
+        _matrix[i] = _maxtrixRow;
+    }
+    console.log(_matrix);
+
+
+    // Lay phan tu tai dong 1 cot 2
+    console.log(_matrix[1][2]);
+
+    // Lay phan tu dong thu 0 va cot cuoi cung
+    console.log(_matrix[0][_matrix[0].length-1]);
+
+    // Lay mang o dong thu 2
+    let _arr = _matrix[2];
+    console.log(_arr);
+
+    // Lay xem bao nhieu phan tu cua mang o dong thu 4
+    console.log(_matrix[4].length);
+
+
+    
+
+
+
+
+
+</script>
+</html>

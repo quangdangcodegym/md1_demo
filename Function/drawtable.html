@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- <table>
+        <tr>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+        </tr> -->
+    <!-- </table> -->
+
+    <h2>Caro Game Simple</h2>
+    <p id="carogame"></p>
+    <br /><br />
+
+    <label id="idCaro"></label>
+    <input type="button" onclick="changeValue()" value="Change Value" />
+    <br>
+    <div id="idCaroButton">
+    </div>
+  </body>
+</html>
+<script>
+
+  let _arrayGlobal = inItValue(15,15);
+    //drawCaroTable(_arrayGlobal);
+    drawCaroButton(_arrayGlobal);
+
+  function inItValue(nRow, nCol) {
+    let _array = new Array();
+      for (i = 0; i<nRow; i++) {
+          _array[i] = new Array();
+              for(let j=0;j<nCol; j++){
+                  _array[i].push("0");
+              }
+      }
+    return _array;
+  }
+
+  // 1, 5
+  function changeValue(){
+      let inputRow = parseInt(prompt("Input x: "));
+      let inputCol = parseInt(prompt("Input y: "));
+      let valueCaro = prompt("Input value: ");
+
+
+      _arrayGlobal[inputRow][inputCol] = valueCaro;
+        //drawCaroTable(_arrayGlobal);
+        drawCaroButton(_arrayGlobal);
+  }
+
+  function buttonClick(inputElement){
+      let i = parseInt(inputElement.min);
+      let j = parseInt(inputElement.max);
+        
+      let valueElement = inputElement.value;
+
+      if(valueElement=="x"){
+        _arrayGlobal[i][j] = '0';
+      }else{
+        _arrayGlobal[i][j] = 'x';
+      }
+      
+    
+
+    drawCaroButton(_arrayGlobal);
+  }
+  function  drawCaroTable(arr){
+      let str = "<table>";
+      for (i = 0; i<arr.length; i++) {
+              str += "<tr>"
+                  for(let j=0;j<arr[i].length; j++){
+                      str += "<td>";
+                      str += arr[i][j];
+                      str+= "</td>";
+                  }
+                  str += "</tr>"
+              }
+              str += "</table>";
+              document.getElementById("idCaro").innerHTML = str;
+          }
+    
+          function drawCaroButton(arr){
+                let str = "";
+                for(let i=0;i<arr.length;i++){
+                    str += "<div>";
+                        for(let j=0;j<arr[i].length;j++){
+                            //str += '<input type="button" value = ';
+                            str += `<input onclick = "buttonClick(this)" min="${i}" max ="${j}" type="button" value = `;
+                            str += arr[i][j];
+                            str += '>';
+
+                        }
+                    str += "</div>";
+                    
+                }
+
+                document.getElementById("idCaroButton").innerHTML = str;
+          }
+          
+</script>

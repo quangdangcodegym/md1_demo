@@ -12,7 +12,7 @@
 <script>
 
     
-    // bien toan cuc: global
+    /* // bien toan cuc: global
     var a = 5;
     var b = 10;
 
@@ -37,7 +37,113 @@
     // Bien toan cuc: global
     var c = 10;
     Wellcome();
-    console.log(c);
+    console.log(c); 
+
+
+    // Tim gia tri lon nhat cua mang
+    var arr1 = [3, 5, 1, 8, -3, 7, 500];
+
+    let max = findMax(arr1);
+    console.log(max);
+
+    var arr2 = [7, 12, 6, 9, 20, 56, 89]
+    let max2 = findMax(arr2);
+    console.log(max2);
+
+
+    
+    function findMax(_array){
+        let max = _array[0]
+        for(let i=0; i<_array.length;i++){
+            if(_array[i] > max){
+                max = _array[i];
+            }
+        }
+        return max;
+    }
+
+
+    // Kiem tra mang co doi xuong khong
+    var arr3 = [2, 1, 5, 1, 2];
+    var arr4 = [2, 3, 5, 1, 2];
+    console.log(checkDoiXung(arr3));
+    console.log(checkDoiXung(arr4));
+
+    function checkDoiXung(arr){
+        // a[0] vs a[4] = a[a.lenght-1 - i]
+        // a[1] vs a[3] = a[a.lenght-1 - i]
+        for(let i=0; i<arr.length/2;i++){
+            if(arr[i]!=arr[arr.length-1-i]){
+                return false;
+            }
+        }
+        return true;
+        // return true or false;
+    } */
+
+    
+
+    // Tim so vi tri so am dau tien cua mang, dung cach viet ham function
+    
+    /* 
+        function vitri(){
+            for(i = 0;i<arr5.length;i++){
+                if (arr5[i]<0){
+                return i;
+                }
+            }
+            
+        }
+        var index = vitri();
+        var index1 = vitri();
+    */
+
+
+    /* var arr5 = [2, 1, 5, -1,  1, 2];
+    var arr7 = [2, -3, 5, 1, -7, 2];
+    function vitri(_mang){
+        for(let i=0; i<_mang.length;i++){
+            if(_mang[i]<0){
+                console.log("so am dau tien",_mang[i]);
+                return i;
+            }
+        }
+    }
+    var index = vitri(arr5);
+    var index1 = vitri(arr7);  */
+
+    var arr5 = [2, 1, 5, -1,  1, 2, -11];
+    var arr7 = [2, -3, 5, 1];
+
+    arr5.sort((a, b)=> a - b);
+    console.log(arr5);
+    // Viet ham lay phan tu thu n cua mang
+    // 
+    /* function vitri(arr, n){
+        if(n<arr.length){
+            return arr[n];
+        }
+        return -1;
+    }
+    var index = vitri(arr5, 3)
+    var index1 = vitri(arr7, 1)
+
+    console.log(index);
+    console.log(index1); */
+    
+    // Viet ham kiem tra so nguyen to
+    // Dau vao la mot so nguyen to
+    // Dau ra tra ve true: la so nguyen to, false ko la so nguyen to
+
+    
+
+
+    
+
+
+
+
+
 
 
 </script>
