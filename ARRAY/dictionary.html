@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="idDic">
+    <select name="vietnamese" id="idVietNamese">
+       
+      
+    </select>
+
+
+      <button onclick="translateEnglish()">Translate</button>
+
+      <input type="text" id="idEnglish" >
+      <input type="text" id="idVietnamese">
+      <button onclick="addToDict()">Add</button>
+
+
+</body>
+<script>
+    let dicVietNamese = ['Xin chao', 'Tieng Anh', 'Qua Tao', 'Qua chuoi', 'Hinh tron'];
+    let dicEnglish = ['hello', 'english', 'apple', 'banana', 'circle'];
+
+    
+
+    function translateEnglish(){
+        // nhap vao tu hello tim vi tri cua tu hello trong mang dicEnglish
+        let _value = document.getElementById("idDic").value;
+        
+
+        let dicEnglishNew = dicEnglish.map(myFunction);
+        console.log(dicEnglishNew);
+
+     
+        // HELLO
+        let _index = dicEnglishNew.indexOf(_value.toUpperCase());
+
+        let _valueVietNamese = dicVietNamese[_index];
+        alert(_valueVietNamese);
+
+
+        // HELO
+    }
+    function myFunction(dic) {
+        return dic.toUpperCase();
+    }
+
+    function addToDict(){
+        let nameEnglish = document.getElementById("idEnglish").value;
+        let nameVietNam = document.getElementById("idVietnamese").value;
+
+        dicVietNamese.push(nameVietNam);
+        dicEnglish.push(nameEnglish);
+
+        showDicVietnamese();
+    }
+
+    function showDicVietnamese(){
+        let str ="";
+        for(let i=0;i<dicVietNamese.length;i++){
+            str += "<option >";
+            str += dicVietNamese[i];
+            str += "</option>";
+        }
+        document.getElementById("idVietNamese").innerHTML = str;
+    }
+</script>
+</html>

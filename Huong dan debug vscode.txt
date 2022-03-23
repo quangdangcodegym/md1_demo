@@ -1,0 +1,2 @@
+Xóa tất cả các thư mục vscode có file .laught
+- Để chạy file js: đứng từ file .html

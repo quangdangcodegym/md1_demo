@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id ="idArray">
+        
+    </div>
+</body>
+<script>
+    /* let size = 6;
+    let min = 1;
+    let max = 9;
+    let matrix = [];
+    for (let i = 0; i < size; i++) {
+        let array = [];
+        for (let j = 0; j < size; j++) {
+            array[j] = Math.floor(Math.random() * (max - min + 1) + min)
+        }
+        matrix[i] = array;
+    }
+    console.log(matrix);
+ */
+
+    /* let nRow = 3;
+    let nCow = 3;
+    let matrix = [];
+    let max = 9;
+    let min = 1;
+    for(let i=0;i<nRow;i++){
+        let arr = [];
+        for(j=0;j<nCow;j++){
+            arr[j] = Math.floor(Math.random() * (max - min + 1) + min);
+        }
+        matrix[i] = arr;
+    }
+    console.log(matrix); */
+
+    // Lay ra vi tri theo dong va cot
+    //console.log(matrix[0][0]);
+
+    // Lay mang theo vi tri dong
+    //console.log(matrix[4]);
+    //console.log(matrix[matrix.length-1]);
+
+
+    // Lay vi tri cuoi cung cua dong thu 2
+    //console.log(matrix[1][9]);
+    //console.log(matrix[1][matrix[1].length-1]);
+
+
+    /* let nRow = 5;
+    let nCow = 5;
+    let matrix = [];
+    let max = 9;
+    let min = 1;
+    for(let i=0;i<nRow;i++){
+        let arr = [];
+        for(j=0;j<nCow;j++){
+            arr[j] = Math.floor(Math.random() * (max - min + 1) + min);
+        }
+        matrix[i] = arr;
+    }
+    console.log(matrix);
+
+    let str = "<table border = '1'>";
+    for(let i=0;i<matrix.length;i++){
+        str += "<tr>";
+        for(let j=0;j<matrix[i].length;j++){
+            str += "<td>";
+            str += matrix[i][j];
+            str += "</td>";
+        }
+        str += "</tr>"
+    }
+    str += "</table>";
+    document.getElementById("idArray").innerHTML = str; */
+
+    // tinh tong cac so chan trong ma tran
+    /* let nRow = 5;
+    let nCow = 5;
+    let matrix = [];
+    let max = 9;
+    let min = 1;
+    for(let i=0;i<nRow;i++){
+        let arr = [];
+        for(j=0;j<nCow;j++){
+            arr[j] = Math.floor(Math.random() * (max - min + 1) + min);
+        }
+        matrix[i] = arr;
+    }
+    console.log(matrix);
+
+    let total = 0;
+    let str = "<table border = '1'>";
+    for(let i=0;i<matrix.length;i++){
+        str += "<tr>";
+        for(let j=0;j<matrix[i].length;j++){
+            if(matrix[i][j]%2==0){
+                str += "<td>";
+                str += matrix[i][j];
+                total += matrix[i][j];
+                str += "</td>";
+            }else{
+                str += "<td>";
+                str += "*";
+                str += "</td>";
+            }
+            
+        }
+        str += "</tr>"
+    }
+    str += "</table>";
+    document.getElementById("idArray").innerHTML = str;
+    console.log(total); */
+
+    // In ra duong cheo chinh
+    /* let nRow = 5;
+    let nCow = 5;
+    let matrix = [];
+    let max = 9;
+    let min = 1;
+    for(let i=0;i<nRow;i++){
+        let arr = [];
+        for(j=0;j<nCow;j++){
+            arr[j] = Math.floor(Math.random() * (max - min + 1) + min);
+        }
+        matrix[i] = arr;
+    }
+    console.log(matrix);
+
+    let total = 0;
+    let str = "<table border = '1'>";
+    for(let i=0;i<matrix.length;i++){
+        str += "<tr>";
+        for(let j=0;j<matrix[i].length;j++){
+            if(i==j){
+                str += "<td>";
+                str += matrix[i][j];
+                str += "</td>";
+            }else{
+                str += "<td>";
+                str += "*";
+                str += "</td>";
+            }
+            
+        }
+        str += "</tr>"
+    }
+    str += "</table>";
+    document.getElementById("idArray").innerHTML = str;
+    console.log(total);
+ */
+
+
+    /* let nRow = 5;
+    let nCow = 5;
+    let matrix = [];
+    let max = 9;
+    let min = 1;
+    for(let i=0;i<nRow;i++){
+        let arr = [];
+        for(j=0;j<nCow;j++){
+            arr[j] = Math.floor(Math.random() * (max - min + 1) + min);
+        }
+        matrix[i] = arr;
+    }
+    console.log(matrix);
+
+    let total = 0;
+    let str = "<table border = '1'>";
+    for(let i=0;i<matrix.length;i++){
+        str += "<tr>";
+        for(let j=0;j<matrix[i].length;j++){
+            if(i== matrix[i].length-1-j){
+                str += "<td>";
+                str += matrix[i][j];
+                str += "</td>";
+            }else{
+                str += "<td>";
+                str += "*";
+                str += "</td>";
+            }
+        }
+        str += "</tr>"
+    }
+    str += "</table>";
+    document.getElementById("idArray").innerHTML = str;
+    console.log(total); */
+
+
+    /* let nRow = 5;
+    let nCow = 5;
+    let matrix = [];
+    let max = 9;
+    let min = 1;
+    for(let i=0;i<nRow;i++){
+        let arr = [];
+        for(j=0;j<nCow;j++){
+            arr[j] = Math.floor(Math.random() * (max - min + 1) + min);
+        }
+        matrix[i] = arr;
+    }
+    console.log(matrix);
+
+    let total = 0;
+    let str = "<table border = '1'>";
+    for(let i=0;i<matrix.length;i++){
+        str += "<tr>";
+        for(let j=0;j<=i;j++){
+            str += "<td>";
+            str += matrix[i][j];
+            str += "</td>";
+        }
+        str += "</tr>"
+    }
+    str += "</table>";
+    document.getElementById("idArray").innerHTML = str;
+    console.log(total); */
+
+    let nRow = 5;
+    let nCow = 5;
+    let matrix = [];
+    let max = 9;
+    let min = 1;
+    for(let i=0;i<nRow;i++){
+        let arr = [];
+        for(j=0;j<nCow;j++){
+            arr[j] = Math.floor(Math.random() * (max - min + 1) + min);
+        }
+        matrix[i] = arr;
+    }
+    console.log(matrix);
+
+    let total = 0;
+    let str = "<table border = '1'>";
+    for(let i=0;i<matrix.length;i++){
+        if(i==2){
+            str += "<tr>";
+            for(let j=0;j<matrix[i].length;j++){
+                str += "<td>";
+                str += matrix[i][j];
+                str += "</td>";
+            }
+            str += "</tr>"
+        }else{
+            str += "<tr>";
+            for(let j=0;j<matrix[i].length;j++){
+                str += "<td>";
+                str += "*";
+                str += "</td>";
+            }
+            str += "</tr>"
+        }
+        
+    }
+    str += "</table>";
+    document.getElementById("idArray").innerHTML = str;
+    console.log(total);
+</script>
+</html>

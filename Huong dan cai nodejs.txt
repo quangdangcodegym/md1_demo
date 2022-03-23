@@ -1,0 +1,16 @@
+Cai node.js ap dung win 8, win 7 thi phai cai phien ban dac biet
+
+Di chuyen thu muc:
+cd .. //ve thu muc cha
+Dang o thu muc D:\CODEGYM\DEMO muon vao thu muc con md1_demo
+cd md1_demo
+Tại thư mục D:\CODEGYM\DEMO bấm Tab sẽ auto hiện ra các file con của thư mục
+
+
++ Tai thu muc md1_demo co file a.js muon dung node chay file a.js
+D:\CODEGYM\DEMO\md1_demo node a.js
+Hoac bam Tab se auto hien ra file a.js
+
+
+
+
