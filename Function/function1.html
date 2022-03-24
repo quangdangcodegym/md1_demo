@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // Viet ham kiem tra xem 1 so la so am, so duong?
+    // dau vao: number
+    // tra ve: true/false
+    // Hieu cach hoat dong cua ham
+
+    /* checkNumber(10);
+    function checkNumber(number){
+        if(number>0){
+            console.log("La so duong");
+            return true;
+        }
+        console.log("La so am");
+        return false;
+    }
+    checkNumber(-1); */
+
+    /* function print(number) {
+        if(number <= 0)
+            return;
+        for(let i = 0; i < number; i++) {
+            console.log(i);
+        }
+    }
+ */
+    //print(-5);
+    //print(10);
+
+
+    // Bien local 
+    /* function print() {
+        let number = 5;
+        console.log(number);
+    }
+
+    print();
+    console.log(number); */
+
+    
+
+    // Su dung bien toan cuc
+    /* let number = 5;
+    function print() {
+        number ++;
+        console.log(number);
+
+    }
+
+    print();
+    console.log(number); */
+
+
+
+    /* let number = 5;
+    function print() {
+        let number = 10;
+        console.log(number);
+
+    }
+
+    print();
+    console.log(number); */
+
+    /* function getCircleArea(rCircle){
+        // rCircle ban kinh
+        // PI*R*R
+
+        return 3.14*rCircle*rCircle;
+    }
+
+    getCircleArea(10);
+    console.log(getCircleArea(10)); */
+
+    // Dau vao: 3 so
+    // Tra ra? 
+    /* function findMin(number1, number2, number3){
+        let arr = [number1, number2, number3];
+
+        let min = arr[0];
+        for(let i=0;i<arr.length;i++){
+            if(min>arr[i]){
+                min = arr[i];
+            }
+        }
+        return min;
+
+    } */
+
+    // result = findMin(4, 1, 7);
+    //console.log(result);
+
+
+    // Dau vao la mot mang cac so, tim ra vi tri cua so nho nhat
+    // Tra ra? 
+    let arr1 = [4, 5, 0, 1, 7];
+    function findMin1(arr){
+
+        let min = arr[0];
+        let index = 0;
+        for(let i=0;i<arr.length;i++){
+            if(min>arr[i]){
+                min = arr[i];
+                index = i
+            }
+        }
+        console.log(index);
+
+    }
+
+    findMin1(arr1);
+
+
+
+</script>
+</html>
