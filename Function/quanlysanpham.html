@@ -7,11 +7,12 @@
     <title>Document</title>
 </head>
 <body>
-
-    <button onclick="showProducts1()">Show Product</button> <br>
+    <input type="text" id="idText">
+    <button onclick="addProduct()">Add</button>
+    <button onclick="showProducts2()">Show Product</button> <br>
 
     <div id="idProducts">
-
+        
     </div>
 </body>
 <script>
@@ -24,7 +25,19 @@
 
     let products = ['Sony', 'Samsung', 'Nokia', 'Xiaomi', 'Iphone 6'];
 
-    
+    products.push("Iphone 7 plus");
+    products.push("Iphone 8 plus");
+    products.push("Iphone X");
+
+    function addProduct(){
+        /* let elementInput = document.getElementById("idText");
+        let valueText = elementInput.value; */
+
+        let valueText = document.getElementById("idText").value;
+        products.push(valueText);
+
+        showProducts2();
+    }
 
     function showProducts(){
         let str ="";
@@ -35,11 +48,11 @@
         }
         let elementProducts = document.getElementById("idProducts");
         elementProducts.innerHTML = str;
+
     }
     function showProducts1(){
         //map(callbackfn: (value: string, index: number, array: string[]) => any, thisArg?: any): any[]
         // callbackfn: (value: string, index: number, array: string[]) => any, thisArg?: any
-
 
         // products.map tra ve mot mang productsMap
         let productsMap  = products.map(
@@ -48,13 +61,27 @@
                 }
 
         );
+        console.log(products);
+        console.log(productsMap);
 
         let str = productsMap.join("");
 
         let elementProducts = document.getElementById("idProducts");
         elementProducts.innerHTML = str;
     }
+    function showProducts2(){
+        let productsMap = products.map(
+            function(value, index){
+                return `<tr><td>${value}</td></tr>`;
+            }
+        );
+        console.log(products);
+        console.log(productsMap);
 
+        let str = "<table border = '1'>" + productsMap.join("") + "</table>";
+        let elementProducts = document.getElementById("idProducts");
+        elementProducts.innerHTML = str;
+    }
 
 </script>
 </html>
