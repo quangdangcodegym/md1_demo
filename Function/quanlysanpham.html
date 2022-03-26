@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <button onclick="showProducts1()">Show Product</button> <br>
+
+    <div id="idProducts">
+
+    </div>
+</body>
+<script>
+
+/* <label>Sony</label> <br>
+    <label>Samsung</label> <br>
+    <label>Nokia</label> <br>
+    <label>Xiaomi</label> <br> */
+
+
+    let products = ['Sony', 'Samsung', 'Nokia', 'Xiaomi', 'Iphone 6'];
+
+    
+
+    function showProducts(){
+        let str ="";
+        for(let i=0;i<products.length;i++){
+            str += "<label>";
+            str+= products[i];
+            str += "</label> <br>";
+        }
+        let elementProducts = document.getElementById("idProducts");
+        elementProducts.innerHTML = str;
+    }
+    function showProducts1(){
+        //map(callbackfn: (value: string, index: number, array: string[]) => any, thisArg?: any): any[]
+        // callbackfn: (value: string, index: number, array: string[]) => any, thisArg?: any
+
+
+        // products.map tra ve mot mang productsMap
+        let productsMap  = products.map(
+                function(value, index){
+                    return `<label>${value}</label> <br>`
+                }
+
+        );
+
+        let str = productsMap.join("");
+
+        let elementProducts = document.getElementById("idProducts");
+        elementProducts.innerHTML = str;
+    }
+
+
+</script>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="#" method="get">
+        <input type="text" name="name">
+        <button type="submit" onclick="
+            // you can code javascript code here, this's same how you code in <script>.....</script>
+            function userRegister1(){
+                console.log('your code in userRegister1 function');
+            }
+            userRegister1();
+
+            // so you return false that's wrong syntax
+            //onsubmit='userRegister1(); return false;'
+            // return must be use in function, in this case you can use in function userRegister1()
+
+
+        ">Click me</button>
+    </form>
+</body>
+<script>
+var alphabet_num = {
+"alphabet": ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P"],
+"start": ["0", "150", "300", "450", "600", "750", "900", "1050", "1200", "1350", "1500", "1650", "1800", "1950", "2100", "2250"],
+"end": ["149", "299", "449", "599", "749", "899", "1049", "1199", "1349", "1499", "1649", "1799", "1949", "2099", "2249", "2399"]
+};
+
+
+var xValue = 350;
+
+var result = alphabet_num.alphabet.map(
+    function(k, i){
+        if (xValue >= alphabet_num.start[i] && xValue <= alphabet_num.end[i]) {
+            console.log(alphabet_num.alphabet[i]);
+            return alphabet_num.alphabet[i];
+        }else{
+            return '0';
+        }
+    }
+
+);
+
+console.log(result);
+
+let index = result.findIndex(function (value){
+    return value!='0';
+});
+
+console.log(index);
+console.log(result[index]);
+</script>
+</html>
