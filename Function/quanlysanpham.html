@@ -9,7 +9,8 @@
 <body>
     <input type="text" id="idText">
     <button onclick="addProduct()">Add</button>
-    <button onclick="showProducts2()">Show Product</button> <br>
+    
+    <button onclick="showProducts4()">Show Product</button> <br>
 
     <div id="idProducts">
         
@@ -29,14 +30,28 @@
     products.push("Iphone 8 plus");
     products.push("Iphone X");
 
+    showProducts4();
+    
     function addProduct(){
         /* let elementInput = document.getElementById("idText");
         let valueText = elementInput.value; */
 
         let valueText = document.getElementById("idText").value;
-        products.push(valueText);
+        products.unshift(valueText);
 
         showProducts2();
+    }
+    function saveProduct(index){
+        let elementInput = document.getElementById("idText");
+        let strValue = elementInput.value;
+
+        products[index] = strValue;
+        showProducts4();
+
+    }
+    function deleteProduct(index1){
+        products.splice(index1, 1);
+        showProducts4();
     }
 
     function showProducts(){
@@ -72,6 +87,7 @@
     function showProducts2(){
         let productsMap = products.map(
             function(value, index){
+                
                 return `<tr><td>${value}</td></tr>`;
             }
         );
@@ -81,6 +97,48 @@
         let str = "<table border = '1'>" + productsMap.join("") + "</table>";
         let elementProducts = document.getElementById("idProducts");
         elementProducts.innerHTML = str;
+    }
+    function showProducts3(){
+        let productsMap = products.map(
+            function(value, index){
+                
+                return `<tr><td>${value}</td><td><button onclick='editProduct(${index})'>Edit</button></td>
+                    <td><button onclick='saveProduct(${index})'>Save</button></td>
+                    </tr>`;
+            }
+        );
+        console.log(products);
+        console.log(productsMap);
+
+        let str = "<table border = '1'>" + productsMap.join("") + "</table>";
+        let elementProducts = document.getElementById("idProducts");
+        elementProducts.innerHTML = str;
+    }
+
+    function showProducts4(){
+        let productsMap = products.map(
+            function(value, index){
+                
+                return `<tr><td>${value}</td><td><button onclick='editProduct(${index})'>Edit</button></td>
+                    <td><button onclick='saveProduct(${index})'>Save</button></td>
+                    <td><button onclick='deleteProduct(${index})'>Delete</button></td>
+                    </tr>`;
+            }
+        );
+        console.log(products);
+        console.log(productsMap);
+
+        let str = "<table border = '1'>" + productsMap.join("") + "</table>";
+        let elementProducts = document.getElementById("idProducts");
+        elementProducts.innerHTML = str;
+    }
+    
+    
+    function editProduct(vitri){
+        let elementInput = document.getElementById("idText");
+
+        elementInput.value = products[vitri];
+
     }
 
 </script>
