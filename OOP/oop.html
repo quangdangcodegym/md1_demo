@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // Student
+    // thuoc tinh: ten, tuoi,dia chi
+    // hanh vi, phuong: cap nhat ten, ca
+
+    // Cach 1: 
+    /* function Student(){
+        this.name = 'Quynh Anh';
+        this.age = '18'
+        this.getName = function(){
+            return "Toi la " + this.name;
+        }
+    }
+
+
+    let student1 = new Student();
+    console.log(student1.name);
+    console.log(student1.getName());
+
+    // Khoi tao lop Date khong tham so
+    function Date(){
+        this.day = 1;
+        this.month = 1;
+        this.year = 2022;
+
+        this.getDay = function (){
+            
+            return this.day;
+        }
+    }
+
+    let day1 = new Date();
+    console.log(day1.month); */
+
+    // Khoi tao lop Date voi tham so truyen vao
+    /* function Date(day, month, year){
+        this.day = day;
+        this.month = month;
+        this.year = year;
+
+        this.getDay = function (){
+            //.....
+            return this.day  + 1;
+        }
+    }
+
+    let day2 = new Date(5,10, 2025);
+    console.log(day2.getDay()); */
+
+
+    /* function Circle(radius, color = 'black'){
+        this.radius = radius;
+        this.color = color;
+        
+        this.getRadius = function (){
+            return radius;
+        }
+        this.getArea = function(){
+            let area = this.radius * this.radius *3.14;
+
+
+            return area;
+        }
+        this.getColor = function (){
+            console.log("This is " + this.color);
+            return color;
+        }
+
+    }
+
+    let circle = new Circle(5);
+    console.log(circle.getArea());
+
+
+    let circle1 = new Circle(5, 'Red');
+    console.log(circle1.getColor()); */
+
+
+    // Them tham so vao khi goi ham
+    /* function Circle(radius, color = 'black'){
+        this.radius = radius;
+        this.color = color;
+        
+        this.getRadius = function (){
+            return radius;
+        }
+        this.getArea = function(PI){
+            let area = this.radius * this.radius *PI;
+
+
+            return area;
+        }
+        this.getColor = function (){
+            console.log("This is " + this.color);
+            return color;
+        }
+
+    }
+
+    let circle = new Circle(5);
+    console.log(circle.getArea(3.14));
+
+
+    let circle1 = new Circle(5, 'Red');
+    console.log(circle1.color); */
+
+
+    /* let circle1 = {
+        radius: 100,
+        color: 'Red',
+
+        getArea: function(){
+            console.log("Thuc hien tinh dien tich....");
+
+            return this.radius * this.radius*3.14;
+        }
+    }
+    circle1.radius = 10;
+    console.log(circle1.getArea()); */
+
+    // Them tham so vao ham getArea
+    let circle1 = {
+        radius: 100,
+        color: 'Red',
+
+        getArea: function(PI){
+            console.log("Thuc hien tinh dien tich....");
+
+            return this.radius * this.radius*PI;
+        }
+    }
+    circle1.radius = 10;
+    console.log(circle1.getArea(5));
+</script>
+</html>

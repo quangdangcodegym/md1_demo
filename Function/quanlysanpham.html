@@ -23,7 +23,7 @@
     <label>Nokia</label> <br>
     <label>Xiaomi</label> <br> */
 
-
+    // tạo biến products kiểu là mảng, là danh sách tên các dòng điện thoại
     let products = ['Sony', 'Samsung', 'Nokia', 'Xiaomi', 'Iphone 6'];
 
     products.push("Iphone 7 plus");
@@ -31,7 +31,6 @@
     products.push("Iphone X");
 
     showProducts4();
-    
     function addProduct(){
         /* let elementInput = document.getElementById("idText");
         let valueText = elementInput.value; */
@@ -65,11 +64,12 @@
         elementProducts.innerHTML = str;
 
     }
+     
     function showProducts1(){
         //map(callbackfn: (value: string, index: number, array: string[]) => any, thisArg?: any): any[]
         // callbackfn: (value: string, index: number, array: string[]) => any, thisArg?: any
 
-        // products.map tra ve mot mang productsMap
+        // products.map tra ve mot mang duoc ánh xạ theo products. tạo biến productsMap để hứng mảng đó
         let productsMap  = products.map(
                 function(value, index){
                     return `<label>${value}</label> <br>`
@@ -79,12 +79,14 @@
         console.log(products);
         console.log(productsMap);
 
+        // Nối các phẩn từ trong mảng productsMap thành kiểu chuỗi, vói định dạng nối "" (rỗng)
         let str = productsMap.join("");
 
         let elementProducts = document.getElementById("idProducts");
         elementProducts.innerHTML = str;
     }
     function showProducts2(){
+
         let productsMap = products.map(
             function(value, index){
                 
