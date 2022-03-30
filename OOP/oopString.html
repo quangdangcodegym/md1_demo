@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    /* let str = "Quynh Anh";
+
+    let str1 = new String("Quynh Anh");
+    
+
+    console.log(str1.toString());
+    console.log(str1.charAt(2));
+    console.log(str1.replace('A', 'E')); */
+
+    
+    
+    /* function StringABC(){
+        this.arrayString = [];
+        
+        this.setString = function(value){
+            // value la mot String = "Quynh Anh";
+            this.arrayString = value.split("");
+        }
+        this.charAt = function(index){
+            return this.arrayString[index];
+        }
+    }
+
+    let str2 = new StringABC();
+    str2.setString("Quynh Anh");
+    console.log(str2);
+
+    // Viet ham charAt 
+    // Dau vao la 1 vi tri
+    // dau ra la ki tu duoc tim thay
+    // this.arrayString = ['Q', 'u', 'y', 'n', ' ', 'A', 'n', 'h'];
+    let value1 = str2.charAt(2);
+    console.log(value1); */
+    let str1 = new String("Quynh Anh");
+    // ['Q', 'u', 'y', 'n', ' ', 'A', 'n', 'h'];
+
+
+    function StringABC(value){
+        this.arrayString = value.split("");
+        this.charAtABC = function(index){
+            return this.arrayString[index];
+        }
+        this.concatABC = function(str){
+            // this.arrayString: ['A', 'n', 'h'];
+            // noi them chuoi "Em" => goi ham split() => arr1 = ['E', 'm'];
+            let arr1 = str.split("");
+            let count = this.arrayString.length;
+            for(let i=0;i<arr1.length;i++){
+                //this.arrayString[3] = arr1[0];
+                //this.arrayString[4] = arr1[1];
+                this.arrayString[count+i] = arr1[i];
+            }
+        }
+    }
+
+    let str2 = new StringABC("Anh");
+    console.log(str2.charAtABC(1));
+    
+    // Viet ham concat
+    // Dau vao: 1 string
+    // dau ra: chuoi duoc noi
+    str2.concatABC("Em");
+    console.log(str2.arrayString.toString());
+</script>
+</html>

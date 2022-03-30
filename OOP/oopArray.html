@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    /* let arr = [2, 3, 5];
+    let arr1 = new Array();
+
+    let listCustomer = ["NGoc", "Dai", "Q anh"];
+    let listCustomer1 = new Array();
+
+    listCustomer1.push("Tai");
+    listCustomer1.push("Tai 123");
+    //listCustomer1.length
+    //console.log(listCustomer1);
+    //console.log(listCustomer1.toString()) */
+
+
+    // Dinh nghia lai lop Array
+    function ArrayNew(){
+        this.arrayNew = [];
+        this.push = function (strNew){
+            //this.arrayNew[1] = strNew
+            let lenghtPresent = this.arrayNew.length;
+            this.arrayNew[lenghtPresent] = strNew;
+        }
+        this.lenght = function (){
+            return this.arrayNew.length;
+        }
+        this.toString = function(sysbol){
+            // dau vao: ko co tham so
+            // dau ra: tra ve 1 chuoi
+            // this.arrayNew = ["Tai 1", "Tai 123"]
+            let str = "";
+            for(let i=0;i<this.arrayNew.length;i++){
+                str = str + this.arrayNew[i] + sysbol;
+            }
+            return str;
+        }
+        this.concat = function(arr){
+            // mang hien tai: this.arrayNew : ["Phon", "Dai", "Phuoc"]
+            // mang noi them vao: arr ["Quang", "Huy"];
+            //this.arrayNew[3] = "Quang";
+            //this.arrayNew[4] = "Huy";
+            let count = this.arrayNew.length;
+            for(let i = 0; i<arr.length;i++){
+                this.arrayNew[i + count] = arr[i]
+                // this.arrayNew[3] = arr[0];
+                // this.arrayNew[4] = arr[1];
+            }
+        }
+
+        this.reverse = function(){
+            // this.arrayNew [Phon, Dai, Phuoc,Quang, Huy]
+            // Khong can hieu ben trong 
+            for(let i =0; i<this.arrayNew.length/2;i++){
+                let temp =  this.arrayNew[i];
+                this.arrayNew[0] = this.arrayNew[this.arrayNew.length - 1-i];
+                this.arrayNew[this.arrayNew.length - 1-i] = temp;
+            }
+        }
+
+        this.pop = function(){
+            //this.arrayNew [Phon, Dai, Phuoc,Quang, Huy]
+            // this.arrayNew.length - 1 => this.arrayNew[4];
+
+            let value = this.arrayNew[this.arrayNew.length - 1];
+            this.arrayNew.length = this.arrayNew.length-1;
+            return value;
+        }
+    }
+
+    let listCustomerNew = new ArrayNew();
+    listCustomerNew.push("Phon");
+    listCustomerNew.push("Dai");
+    listCustomerNew.push("Phuoc");
+
+    //let value = listCustomerNew.toString("---");
+    //console.log(value);
+
+
+    // Viet ham noi mang 
+    // Dau vao: 1 mang 
+    // Dau ra: la mang duoc noi
+    // Ten ham: concat
+    /* let arr1 = ["Quang", "Huy"];
+    listCustomerNew.concat(arr1);
+    let value1 = listCustomerNew.toString("-*-");
+    console.log(value1); */
+
+
+    // Viet ham reverse cua mang
+    // Ten ham: reverse
+    // Dau vao: ko co tham so
+    // Dau ra: ko
+    /* let arr1 = ["Quang", "Huy"];
+    listCustomerNew.concat(arr1);
+    let value1 = listCustomerNew.toString("-*-");
+    console.log(value1); */
+
+    // Viet lai ham reverse
+    /* listCustomerNew.reverse();
+    let value2 = listCustomerNew.toString("---");
+    console.log(value2) */;
+
+
+    // Viet lai ham pop();
+    // dau vao: ko co tham so
+    // dau ra: tra ve 1 chuoi
+    // ten ham: pop
+
+    let arr1 = ["Quang", "Huy"];
+    listCustomerNew.concat(arr1);
+    let value1 = listCustomerNew.toString("-*-");
+    console.log(value1);
+
+    console.log(listCustomerNew.arrayNew);
+    listCustomerNew.pop();
+    console.log(listCustomerNew.arrayNew);
+
+
+</script>
+</html>
