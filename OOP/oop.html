@@ -9,138 +9,85 @@
 <body>
     
 </body>
+
 <script>
-    // Student
-    // thuoc tinh: ten, tuoi,dia chi
-    // hanh vi, phuong: cap nhat ten, ca
+    /* function Mobile(){
+        this.battery = 100;
+        this.message = "";
+        this.inboxs = [];
+        this.sents = [];
+        this.status = true;
 
-    // Cach 1: 
-    /* function Student(){
-        this.name = 'Quynh Anh';
-        this.age = '18'
-        this.getName = function(){
-            return "Toi la " + this.name;
-        }
-    }
-
-
-    let student1 = new Student();
-    console.log(student1.name);
-    console.log(student1.getName());
-
-    // Khoi tao lop Date khong tham so
-    function Date(){
-        this.day = 1;
-        this.month = 1;
-        this.year = 2022;
-
-        this.getDay = function (){
-            
-            return this.day;
-        }
-    }
-
-    let day1 = new Date();
-    console.log(day1.month); */
-
-    // Khoi tao lop Date voi tham so truyen vao
-    /* function Date(day, month, year){
-        this.day = day;
-        this.month = month;
-        this.year = year;
-
-        this.getDay = function (){
-            //.....
-            return this.day  + 1;
-        }
-    }
-
-    let day2 = new Date(5,10, 2025);
-    console.log(day2.getDay()); */
-
-
-    /* function Circle(radius, color = 'black'){
-        this.radius = radius;
-        this.color = color;
-        
-        this.getRadius = function (){
-            return radius;
-        }
-        this.getArea = function(){
-            let area = this.radius * this.radius *3.14;
-
-
-            return area;
-        }
-        this.getColor = function (){
-            console.log("This is " + this.color);
-            return color;
+        this.checkStatus = function (){
+            return this.status;
         }
 
     }
 
-    let circle = new Circle(5);
-    console.log(circle.getArea());
+    let iPhone = new Mobile();
+    console.log(iPhone.battery);
 
+    let Nokia = new Nokia();
+    console.log(Nokia.battery); */
 
-    let circle1 = new Circle(5, 'Red');
-    console.log(circle1.getColor()); */
+    /* function Mobile(name){
+        this.name = name;
+        this.battery = 100;
+        this.message = "";
+        this.inboxs = [];
+        this.sents = [];
+        this.status = true;
 
-
-    // Them tham so vao khi goi ham
-    /* function Circle(radius, color = 'black'){
-        this.radius = radius;
-        this.color = color;
-        
-        this.getRadius = function (){
-            return radius;
-        }
-        this.getArea = function(PI){
-            let area = this.radius * this.radius *PI;
-
-
-            return area;
-        }
-        this.getColor = function (){
-            console.log("This is " + this.color);
-            return color;
+        this.checkStatus = function (){
+            return this.status;
         }
 
     }
 
-    let circle = new Circle(5);
-    console.log(circle.getArea(3.14));
+    let iPhone = new Mobile("Iphone");
+    console.log(iPhone.name); // Iphone
 
+    let nokia = new Mobile("Nokia");
+    console.log(nokia.name);  // Nokia */
 
-    let circle1 = new Circle(5, 'Red');
-    console.log(circle1.color); */
+    function Mobile(name, bat, mes, inboxs, sents, status ){
+        this.name = name;
+        this.battery = bat;
+        this.message = mes;
+        this.inboxs = inboxs;
+        this.sents = sents;
+        this.status = status;
 
-
-    /* let circle1 = {
-        radius: 100,
-        color: 'Red',
-
-        getArea: function(){
-            console.log("Thuc hien tinh dien tich....");
-
-            return this.radius * this.radius*3.14;
+        this.checkStatus = function (){
+            return this.status;
         }
-    }
-    circle1.radius = 10;
-    console.log(circle1.getArea()); */
-
-    // Them tham so vao ham getArea
-    let circle1 = {
-        radius: 100,
-        color: 'Red',
-
-        getArea: function(PI){
-            console.log("Thuc hien tinh dien tich....");
-
-            return this.radius * this.radius*PI;
+        this.turnOnOff = function(statusPhone){
+            //"On/Off" or true/false
+            if(statusPhone=="ON"){
+                this.status = true;
+            }else{
+                this.status = false;
+            }
         }
+
     }
-    circle1.radius = 10;
-    console.log(circle1.getArea(5));
+
+    let iPhone = new Mobile("Iphone", 80, "This is Iphone", [], [] , false);
+    console.log(iPhone.status); // false
+    iPhone.turnOnOff("ON")
+    console.log(iPhone.status); // true?
+
+
+    let nokia = new Mobile("Nokia", 50, "This is nokia", [], [], false);
+    console.log(nokia.status);
+
+
+
+
+
+
+
+
+
 </script>
 </html>

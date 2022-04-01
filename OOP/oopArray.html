@@ -62,7 +62,7 @@
             // Khong can hieu ben trong 
             for(let i =0; i<this.arrayNew.length/2;i++){
                 let temp =  this.arrayNew[i];
-                this.arrayNew[0] = this.arrayNew[this.arrayNew.length - 1-i];
+                this.arrayNew[i] = this.arrayNew[this.arrayNew.length - 1-i];
                 this.arrayNew[this.arrayNew.length - 1-i] = temp;
             }
         }
