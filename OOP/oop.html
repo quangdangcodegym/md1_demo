@@ -70,16 +70,94 @@
             }
         }
 
+        this.receiveMessage = function(mobile, message){
+            // this.inboxs ["abc", 'dvvdv'];
+            // Cap nhat inbox cho doi tuong this
+
+            // this.inboxs  ban dau []
+            let count = this.inboxs.length;
+            this.inboxs[count] = message;
+
+
+            // Cap nhat da gui cho mobile
+            let count1 = mobile.sents.length;
+            mobile.sents[count1] = message;
+        }
+        this.viewInbox = function (){
+            //this.inboxs []
+            for(let i=0;i<this.inboxs.length;i++){
+                console.log(this.inboxs[i]);
+            }
+        }
+
+
+        // Ten function charge()
+        // Dau vao: 1 con so
+        // Dau ra: ko can 
+        // Thuc hien gi:  
+        this.charge = function (numberBattery){
+            this.battery = this.battery + numberBattery;
+            if(this.battery>=100){
+                this.battery = 100;
+            }
+        }
+
+        this.setMessage = function (text){
+            this.message = text;
+        }
+
     }
 
-    let iPhone = new Mobile("Iphone", 80, "This is Iphone", [], [] , false);
+    /* let iPhone = new Mobile("Iphone", 80, "This is Iphone", [], [] , false);
     console.log(iPhone.status); // false
     iPhone.turnOnOff("ON")
     console.log(iPhone.status); // true?
 
 
     let nokia = new Mobile("Nokia", 50, "This is nokia", [], [], false);
-    console.log(nokia.status);
+    console.log(nokia.status); */
+
+    /* window.setInterval(printConsoleLog, 1000);
+
+    function printConsoleLog(){
+        console.log("Print after 1s")
+    } */
+
+    /* let iPhone = new Mobile("Iphone", 10, "This is Iphone", [], [] , false);
+    iPhone.charge(1);
+    console.log(iPhone.battery);
+
+
+    //window.setInterval(function, milliseconds);
+    let myVar = window.setInterval(chargingYourPhone, 1000);
+
+
+    function chargingYourPhone(){
+        console.log("charging.....");
+        iPhone.charge(10);
+        if(iPhone.battery==100){
+            clearInterval(myVar);
+            console.log("Pin full 100%.....");
+        }
+    }  */
+
+    let  = new Mobile("Iphone", 10, "This is Iphone", [], [] , false);
+    let iphone1 = new Mobile("Iphone1", 10, "This is Iphone", [], [] , false);
+    let iphone2 = new Mobile("Iphone2", 10, "This is Iphone", [], [] , false);
+    let iphone3 = new Mobile("Iphone3", 10, "This is Iphone", [], [] , false);
+    let nokia = new Mobile("Nokia1", 20, "This is Nokia", [], [], true);
+    let nokia1 = new Mobile("Nokia2", 20, "This is Nokia", [], [], true);
+    let nokia2 = new Mobile("Nokia3", 20, "This is Nokia", [], [], true);
+    let nokia3 = new Mobile("Nokia4", 20, "This is Nokia", [], [], true);
+
+
+
+
+
+
+
+
+ 
 
 
 
